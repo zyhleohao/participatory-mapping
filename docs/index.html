@@ -46,6 +46,12 @@
             margin-bottom: 10px;
         }
 
+        #email {
+            width: 100%;
+            height: 20px;
+            margin-bottom: 10px;
+        }
+
         #content {
             width: 100%;
             height: 45px;
@@ -186,6 +192,7 @@
         async function submitNewRecord() {
             let contributor = document.getElementById('name').value;
             let content = document.getElementById('content').value;
+            let content = document.getElementById('email').value;
             let lngLat = popup.getLngLat();
 
             // Create a new URLSearchParams object and append the data to it
