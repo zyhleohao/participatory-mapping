@@ -121,6 +121,7 @@
                     'properties': {
                         'contributor': data.rows[i].contributor,
                         'content': data.rows[i].content,
+                        'email': data.rows[i].email,
                     },
                     'geometry': {
                         'type': 'Point',
@@ -155,10 +156,11 @@
             var coordinates = e.features[0].geometry.coordinates;
             var content = e.features[0].properties.content;
             var contributor = e.features[0].properties.contributor;
+            var email = e.features[0].properties.email;
 
             popup = new maplibregl.Popup()
                 .setLngLat(coordinates)
-                .setHTML("<p><b>" + contributor + "</b> <i>said:</i> " + content + "</p>")
+                .setHTML("<p><b>" + contributor + "</b> <i>said:</i> " + content + "</p>" + "</b> <i>, email:</i> " + email + "</p>")
                 .addTo(map);
         });
 
@@ -192,13 +194,14 @@
         async function submitNewRecord() {
             let contributor = document.getElementById('name').value;
             let content = document.getElementById('content').value;
-            let content = document.getElementById('email').value;
+            let email = document.getElementById('email').value;
             let lngLat = popup.getLngLat();
 
             // Create a new URLSearchParams object and append the data to it
             let newRecord = new URLSearchParams();
             newRecord.append('contributor', contributor);
             newRecord.append('content', content);
+            newRecord.append('email', email);
             newRecord.append('lng', lngLat.lng);
             newRecord.append('lat', lngLat.lat);
 
@@ -222,6 +225,7 @@
                     'properties': {
                         'contributor': contributor,
                         'content': content,
+                        'email': email,
                     },
                     'geometry': {
                         'type': 'Point',
