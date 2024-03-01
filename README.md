@@ -15,3 +15,4 @@ This is a map that users can place points on the map giving reviews of their fav
 - Visual map-makers who are aspiring to create their own PGIS maps.
 - Small business owners in Seattle who want to increase their visibility and attract more customers.
 
+<img width="1440" alt="截屏2024-02-29 下午3 55 32" src="https://github.com/zyhleohao/participatory-mapping/assets/129431505/3096c019-438d-4d3c-8657-0b500372026c">
