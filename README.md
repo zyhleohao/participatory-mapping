@@ -1,6 +1,6 @@
 # Small Business Participatory Map
 
-Link:
+Link:https://geog-458-participatory-map-5a07490dcad1.herokuapp.com/
 
 ## Introduction
 This is a map that users can place points on the map giving reviews of their favorite smaller businesses that they have visited in the Seattle area. Users can click on the map to put down a small business location and, write reviews for them. It gives small businesses a higher chance to be selected because of the Top-Down view of the map, no big signs drawing people to large businesses.
